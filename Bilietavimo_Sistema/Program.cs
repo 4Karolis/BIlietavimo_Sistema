@@ -9,7 +9,7 @@ namespace Bilietavimo_Sistema
         {
             //Meniu();
             //BilietuKiekis();
-
+           // SarasoKurimas();
             //Pirminis klausimas
             Console.WriteLine("[1] PARDUOTI bilietus, [2] KURTI bilietus");
             int pirmasPasirinkimas = int.Parse(Console.ReadLine());
