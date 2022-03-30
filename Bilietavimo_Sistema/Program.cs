@@ -9,16 +9,20 @@ namespace Bilietavimo_Sistema
         {
             //Meniu();
             //BilietuKiekis();
+
+            //Pirminis klausimas
             Console.WriteLine("[1] PARDUOTI bilietus, [2] KURTI bilietus");
             int pirmasPasirinkimas = int.Parse(Console.ReadLine());
-
+            //[paima PARDUOTI / KURTI, paklausia kokiu, grazina pasirinkima
             Antras(pirmasPasirinkimas);
+            //paima bilieto tipa, paklausia kiek? grazaina kiekio pasirinkima pasirinkima
+            int antrasPasirinkimas = BilietoTipas();
             Trecias(antrasPasirinkimas);
             
         }
         public static void Trecias(int antrasPasirinkimas)
         {
-             antrasPasirinkimas = BilietoTipas();
+             //num = BilietoTipas();
 
             switch (antrasPasirinkimas)
             {
