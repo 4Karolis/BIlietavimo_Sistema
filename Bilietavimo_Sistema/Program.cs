@@ -7,18 +7,19 @@ namespace Bilietavimo_Sistema
     {
         static void Main(string[] args)
         {
-            //Meniu();
-            //BilietuKiekis();
-           // SarasoKurimas();
-            //Pirminis klausimas
-            Console.WriteLine("[1] PARDUOTI bilietus, [2] KURTI bilietus");
-            int pirmasPasirinkimas = int.Parse(Console.ReadLine());
-            //[paima PARDUOTI / KURTI, paklausia kokiu, grazina pasirinkima
-            Antras(pirmasPasirinkimas);
-            //paima bilieto tipa, paklausia kiek? grazaina kiekio pasirinkima pasirinkima
-            int antrasPasirinkimas = BilietoTipas();
-            Trecias(antrasPasirinkimas);
+
+            MainMenu();
+
             
+            //Antras(pirktiParduoti);
+            
+            //int antrasPasirinkimas = BilietoTipas();
+            //Trecias(antrasPasirinkimas);
+            
+        }
+        public static int GautiBilietoTipa()
+        {
+
         }
         public static void Trecias(int antrasPasirinkimas)
         {
@@ -38,10 +39,9 @@ namespace Bilietavimo_Sistema
             }
             //BilietuKiekis();
         }
-        public static void Antras(int pirmasPasirinkimas)
+        public static void Antras(int pirktiParduoti)
         {
-            //pirmasPasirinkimas = Meniu();
-            switch (pirmasPasirinkimas)
+            switch (pirktiParduoti)
             {
                 case 1:
                     BilietoTipas();                    
@@ -74,14 +74,21 @@ namespace Bilietavimo_Sistema
         public static int BilietoTipas()
         {
             Console.WriteLine("Pasirinkite bilieto tipa: [1] - 10 EUR, [2] - 20 EUR, [3] - 3 EUR");
-            int antrasPasirinkimas = int.Parse(Console.ReadLine());
-            return antrasPasirinkimas;
+            int bilietoTipas = int.Parse(Console.ReadLine());
+            return bilietoTipas;
         }
-        public static int Meniu()
+        //public static int Meniu()
+        //{
+        //    Console.WriteLine("[1] PARDUOTI bilietus, [2] KURTI bilietus");
+        //    int pirmasPasirinkimas = int.Parse(Console.ReadLine());
+        //    return pirmasPasirinkimas;
+        //}
+
+        public static int MainMenu()
         {
             Console.WriteLine("[1] PARDUOTI bilietus, [2] KURTI bilietus");
-            int pirmasPasirinkimas = int.Parse(Console.ReadLine());
-            return pirmasPasirinkimas;
+            int pirktiParduoti = int.Parse(Console.ReadLine());
+            return pirktiParduoti;
         }
     }
 }
